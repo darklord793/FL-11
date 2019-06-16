@@ -16,15 +16,17 @@
                         <img src="./logo.png" alt="EPAM" >
                         <h1>HTML Elements</h1>
                         <hr> 
-                        <nav >
-                            <a href="#home"><b>Home</b></a>
-                            <a href="#headers"><b>Headers</b></a>
-                            <a href="#text"><b>Text</b></a>
-                            <a href="#list"><b>List</b></a>
-                            <a href="#table"><b>Table</b></a>
-                            <a href="#blockquotes"><b>Blockquotes</b></a>
-                        </nav>  
-                        <hr>
+                    </header>
+                    <nav>
+                        <a href="#home"><b>Home</b></a>
+                        <a href="#headers"><b>Headers</b></a>
+                        <a href="#text"><b>Text</b></a>
+                        <a href="#list"><b>List</b></a>
+                        <a href="#table"><b>Table</b></a>
+                        <a href="#blockquotes"><b>Blockquotes</b></a>
+                    </nav>  
+                    <hr>
+                    <main>
                         <p> 
                             Lorem ipsum dolor sit amet, <a href="">test link</a> adipiscing elit.<b> This is strong.</b>
                             Nullam dignissim convallis est. Quisque aliquam.<em> This is emphasized.</em> Donec faucibus. 
@@ -37,9 +39,9 @@
                             Watch out for the abbreviations! <abbr title="Hyper Text Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets" >CSS</abbr> are our tools. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. To copy a file type
                             <kbd>COPY</kbd> <em>filename.</em> <s>Dinner`s at 5:00.</s> <ins>Let&#39;s make that 7.</ins> This <s>text</s> has been struck. 
                         </p>
-                        <hr>
-                    </header>
-                    <article id="headers">
+                    </main>
+                    <hr>
+                    <section id="headers">
                         <p>
                             Pay attention to h1 tag inside section element. Font-size for h1 is the same as font-size for h2,
                             because we have to use only one h1 on the page, and it is commonly used inside header
@@ -50,13 +52,13 @@
                         <h5>Header 5</h5>
                         <h6>Header 6</h6>
                         <hr>
-                    </article>
-                    <article id="text">
+                    </section>
+                    <section id="text">
                         <h2>Text formats</h2>
                         <h3>Article Text</h3>
                         <article>
-                           <h2>Article title</h2>
-                           <p>Article description</p>
+                            <h2>Article title</h2>
+                            <p>Article description</p>
                         </article>
                         <h3>Preformatted Text</h3>
                         <pre><kbd> <b>Text</b>
@@ -73,9 +75,9 @@
   vertical-align: middle; 
   justify-content: center; 
 }
-                              </code>
+                                </code>
                         </pre>
-                    </article>
+                    </section>
                     <section id="list">
                         <h2>Unordered Product List</h2>
                         <ul>
@@ -159,10 +161,10 @@
                                 <button type="submit">Submit</button>
                             </fieldset>
                         </form>
-                        <footer>
-                            <p>&copy; Copyright Epam Systems</p>
-                        </footer>
                     </div>
+                    <footer>
+                        <span>&copy; Copyright Epam Systems</span>
+                    </footer>
                 </div>
             </div>
         </div>
