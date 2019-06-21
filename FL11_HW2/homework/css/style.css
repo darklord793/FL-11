@@ -38,7 +38,8 @@ section::before {
     border-top: 20px solid lightskyblue;
 }
 
-.heading h2 {
+h2,
+.heading .tm-content-box {
     text-align: center;
     color: lightskyblue;
 }
@@ -200,14 +201,31 @@ section::before {
         max-width: 100%;
     }
     
+    .tm-banner {
+        padding: 20px;
+    }
+    
+    .tm-banner-inner {
+        padding-bottom: 20px;
+    }
+    
     .heading.tm-content-box {
         color: lightskyblue;
         -webkit-print-color-adjust: exact;
     }
     
+    .heading h2 {
+        font-size: 22px;
+    }
+    
+    .carousel-description {
+        margin-left: 5px !important;
+        margin-right: 5px !important;
+    }
+    
     .tm-banner-text {
         animation: none;
-        font-size: 30px;
+        font-size: 18px;
     }
     
     .tm-banner-inner p.tm-banner-text {
@@ -215,7 +233,6 @@ section::before {
         filter: none;
         letter-spacing: inherit;
         word-spacing: inherit;
-        /*font-size: 2px;*/
         color: #a9adad;
         -webkit-print-color-adjust: exact;
     }
@@ -234,6 +251,7 @@ section::before {
 
     .tm-content-header .tm-banner-inner>img {
         display: block !important;
+        width: 90px;
     }
 
     .tm-section-title {
@@ -242,6 +260,7 @@ section::before {
         -webkit-print-color-adjust: exact;
         font-weight: normal;
         text-align: center;
+        font-size: 22px;
     }
     
     .heading ol {
@@ -254,21 +273,24 @@ section::before {
 
     .padding-medium ol a {
         color: black;
-        font-size: 16px;
+        font-size: 11px;
     }
 
     li:first-letter {
-        color: rgba(102,204,255,0.6);
+        color: lightskyblue;
         -webkit-print-color-adjust: exact;
         font-size: 25px;
     }
 
+
     .padding-medium ol>li:nth-child(odd) {
         text-align: left;
+        margin-left: 30px;
     }
 
     .padding-medium ol>li:nth-child(even) {
         text-align: right;
+        margin-right: 40px;
     }
 
     .heading ol a:visited {
@@ -302,10 +324,7 @@ section::before {
     p {
         text-indent: 0px !important;
         font-style: normal !important;
+        font-size: 11px;
     }
     
-footer p{
-    margin-bottom: -0.7rem;
-}
-
 }
