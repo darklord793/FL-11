@@ -308,7 +308,8 @@ h2,
     .blocks p.tm-section-description {
         font-family: 'Open Sans', Helvetica, Arial, sans-serif;
         text-align: center;
-        margin-top: 30px;
+        margin-top: 0px;
+        
     }
     .flex-item {
         margin-left: 45px !important;
