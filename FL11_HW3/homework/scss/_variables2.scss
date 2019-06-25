@@ -1,34 +1,33 @@
-$LinearGradientBannerColors: (
-    "Gradientleft": #e2ab00,
-    "GradientCenter": #af5a35,
-    "GradienCentertRight": #a24542,
-    "GradientRight": #922b53
+$linear-gradient-banner-colors: (
+    "gradient-left": #e2ab00,
+    "gradient-center": #af5a35,
+    "gradien-centert-right": #a24542,
+    "gradient-right": #922b53
     );
-$LinearGradientBgColorMain: (
-    "GradientTop": #21232E,
-    "GradientBotoom": #3B3F50
+$linear-gradient-bg-color-main: (
+    "gradient-top": #21232E,
+    "gradient-botoom": #3B3F50
     );
 
 
 
-$MediumTextFont: Fresca;
-$BigTextFont: source sans pro;
-$BgColorFooter: #3B3F50;
-$ButtonColor: #E3AD00;
-$AfterColor: #E14E33;
-$BgColorSectionCard: #3B3F50;
-$HeaderBg: url(../img/m-h-night.jpg);
-$TextColorTop: White;
-$TextColorFooter: white;
-$logoPMarginTop: 25px !important;
-$logoPSpanMargin: 0px;
-$LogofontWeight: 600 !important;
-$TextOpacity: 1;
-$TextColorlogo: white;
-$FontLogoP: 800;
-$HeaderHeadingMarginTop: 65px;
-$CardTextLineHeight: 150%;
-$SectionCardTexMarginLeft: 35px;
-$SectionCardTexMarginright: 35px;
-$SectionCardTexColor: #d1d1d1;
-$FooterTextColor: #d1d1d1;
+$medium-text-font: Fresca;
+$bg-color-footer: #3B3F50;
+$button-color:#E3AD00;
+$after-color: #E14E33;
+$bg-color-section-card: #3B3F50;
+$header-bg:  url(../img/m-h-night.jpg);
+$text-color-top: White;
+$text-color-footer: white;
+$logo-p-margin-top:25px !important;
+$logo-p-span-margin: 0px;
+$logo-font-weight: 600 !important;
+$text-opacity: 1;
+$text-color-logo: white;
+$font-logo-p:800;
+$header-heading-margin-top: 65px;
+$card-text-line-height: 150%;
+$section-card-text-margin-left: 35px;
+$section-card-text-margin-right: 35px;
+$section-card-text-color: #d1d1d1;
+$footer-text-color: #d1d1d1;

@@ -1,11 +1,11 @@
 @mixin font-logo{
-    font-family: $MediumTextFont;
+    font-family: $medium-text-font;
     font-weight: 900;
     font-size: 13px;
 }
 @mixin font-logo-p{
-    font-family: $MediumTextFont;
-    font-weight: $FontLogoP;
+    font-family: $medium-text-font;
+    font-weight: $font-logo-p;
     font-size: 30px;
 }
 %message-shared {
@@ -14,12 +14,12 @@
 body {
     width: 1920px;
     margin: 0px;
-    background-color: map-get($LinearGradientBgColorMain, "GradientTop");
+    background-color: map-get($linear-gradient-bg-color-main, "gradient-top");
 }
 .header-wrap {
     border: 0px;
     border-radius: 0% 0% 40% 0%;
-    background: $HeaderBg;
+    background: $header-bg;
     background-size: cover;
     background-position: center;
     min-height: 80vh;
@@ -38,8 +38,8 @@ body {
 }
 .header-wrap .landing-logo p {
     @include font-logo-p;
-    margin-top: $logoPMarginTop;
-    color: $TextColorlogo;
+    margin-top: $logo-p-margin-top;
+    color: $text-color-logo;
     margin-left: 20px;
     display: flex;
     flex-direction: column;
@@ -49,23 +49,23 @@ body {
 .landing-logo span {
     @include font-logo;
     text-align: center;
-    margin-top: $logoPSpanMargin;
-    color: $TextColorTop;
+    margin-top: $logo-p-span-margin;
+    color: $text-color-top;
 
 }
 p.header_heading {
-    margin-top: $HeaderHeadingMarginTop;
+    margin-top: $header-heading-margin-top;
     width: 700px;
     @extend %message-shared;
     font-size: 90px;
-    font-family: $BigTextFont;
+    font-family: "source sans pro";
     font-weight: 700;
     line-height: 100%;
-    color: $TextColorTop;
+    color: $text-color-top;
 }
 p.header_heading::after {
     content: '';
-    background-color: $AfterColor;
+    background-color: $after-color;
     height: 30px;
     width: 380px;
     position: absolute;
@@ -78,14 +78,14 @@ p.header_text {
     width: 850px;
     margin-left: 192px;
     font-size: 20px;
-    font-family: $MediumTextFont;
+    font-family: $medium-text-font;
     white-space: pre-line;
     line-height: 150%;
-    color: $TextColorTop;
+    color: $text-color-top;
     line-height: 150%;
 }
 button.header_button {
-    background-color: $ButtonColor;
+    background-color: $button-color;
     color: white;
     border: 0px;
     border-radius: 5px 5px 5px 5px;
@@ -97,7 +97,7 @@ button.header_button {
     font-size: 20px;
 }
 main {
-    background: linear-gradient(to bottom, map-get($LinearGradientBgColorMain, "GradientTop") 87%, map-get($LinearGradientBgColorMain, "GradientBotoom") 87%);
+    background: linear-gradient(to bottom, map-get($linear-gradient-bg-color-main, "gradient-top") 87%, map-get($linear-gradient-bg-color-main, "gradient-botoom") 87%);
     width: 100%;
     position: relative;
     z-index: -50;
@@ -105,18 +105,18 @@ main {
 }
 main.section p.section_text {
     text-align: center;
-    font-family: $BigTextFont;
+    font-family: "source sans pro";
     font-size: 50px;
     position: relative;
     font-weight: 600;
     margin-top: 47px;
     margin-bottom: 47px;
-    color: $TextColorTop;
+    color: $text-color-top;
     opacity: 1;
 }
 main.section p.section_text::after {
     content: '';
-    background-color: $AfterColor;
+    background-color: $after-color;
     height: 15px;
     width: 225px;
     position: absolute;
@@ -136,10 +136,10 @@ main.section p.section_text::after {
     margin-right: 192px;
 }
 .section_card {
-    border: 0px solid $BgColorSectionCard;
+    border: 0px;
     border-radius: 10px 10px 10px 10px;
     margin-left: 20px;
-    background-color: $BgColorSectionCard;
+    background-color: $bg-color-section-card;
     position: relative;
     z-index: -50;
     color: white;
@@ -157,7 +157,7 @@ main.section p.section_text::after {
     justify-content: center !important;
     width: max-content;
     text-align: center !important;
-    font-family: $BigTextFont;
+    font-family: "source sans pro";
     font-size: 30px;
     position: relative;
     font-weight: 600;
@@ -166,7 +166,7 @@ main.section p.section_text::after {
 }
 p.section_card_heading::after {
     content: '';
-    background-color: $AfterColor;
+    background-color: $after-color;
     height: 15px;
     width: 100%;
     position: absolute;
@@ -175,9 +175,9 @@ p.section_card_heading::after {
     z-index: -1;
 }
 .section_card_text{
-    margin-left: $SectionCardTexMarginLeft;
-    margin-right: $SectionCardTexMarginright;
-    font-family: $MediumTextFont;
+    margin-left: $section-card-text-margin-left;
+    margin-right: $section-card-text-margin-right;
+    font-family: $medium-text-font;
     font-size: 20px;
     display: flex;
     flex: 25%;
@@ -187,8 +187,8 @@ p.section_card_heading::after {
     vertical-align: middle;
     flex-direction: column;
     height: 165px;
-    color: $SectionCardTexColor;
-    line-height: $CardTextLineHeight;
+    color: $section-card-text-color;
+    line-height: $card-text-line-height;
 }
 .section_banner {
     margin-top: 175px;
@@ -199,23 +199,23 @@ p.section_card_heading::after {
     position: relative;
     display: flex;
     z-index: -50;
-    background: linear-gradient(45deg, map-get($LinearGradientBannerColors, "Gradientleft") 25%, map-get($LinearGradientBannerColors, "GradientCenter") 55%, map-get($LinearGradientBannerColors, "GradienCentertRight") 75%, map-get($LinearGradientBannerColors, "GradientRight") 100%);
+    background: linear-gradient(45deg, map-get($linear-gradient-banner-colors, "gradient-left") 25%, map-get($linear-gradient-banner-colors, "gradient-center") 55%, map-get($linear-gradient-banner-colors, "gradien-centert-right") 75%, map-get($linear-gradient-banner-colors, "gradient-right") 100%);
 }
 .section_banner_heading {
     margin-left: 130px;
-    font-family: $BigTextFont;
+    font-family: "source sans pro";
     margin-top: 35px;
     font-size: 34px;
     text-align: left;
     font-weight: bold;
-    color: $TextColorTop;
+    color: $text-color-top;
 }
 .section_banner_text_wrap {
       width: 700px;
     }
 p.section_banner_heading:after {
     content: '';
-    background-color: $AfterColor;
+    background-color: $after-color;
     height: 15px;
     width: 75px;
     position: absolute;
@@ -228,7 +228,7 @@ p.section_banner_text {
     display: flex;
     flex-direction: column;
     margin-left: 130px;
-    font-family: $BigTextFont;
+    font-family: "source sans pro";
     margin-top: -10px;
     margin-bottom: auto;
     font-size: 19px;
@@ -239,7 +239,7 @@ p.section_banner_text {
 }
 button.section_banner_button {
     text-align: center;
-    background-color: $ButtonColor;
+    background-color: $button-color;
     color: white;
     border: 0px;
     border-radius: 5px 5px 5px 5px;
@@ -251,7 +251,7 @@ button.section_banner_button {
     font-size: 20px;
 }
 footer {
-    background: $BgColorFooter;
+    background: $bg-color-footer;
     color: white;
     height: 166px;
 }
@@ -264,38 +264,38 @@ footer {
 .footer_logo {
     margin-top: 10px;
     opacity: 0.9;
-    color: $TextColorFooter;
+    color: $text-color-footer;
 }
 .footer_text {
     margin-left: 70px;
     width: 350px;
-    font-size: 19;
-    font-family: $MediumTextFont;
+    font-size: 19px;
+    font-family: $medium-text-font;
     line-height: 150%;
-    color: $FooterTextColor;
+    color: $footer-text-color;
 }
 .footer_logo p {
-    margin-top: $logoPMarginTop;
-    font-family: $MediumTextFont;
+    margin-top: $logo-p-margin-top;
+    font-family: $medium-text-font;
     font-size: 30px;
-    color: $TextColorFooter;
+    color: $text-color-footer;
     margin-left: 20px;
     display: flex;
     flex-direction: column;
 
 }
 .footer_logo p>span {
-    font-family: $MediumTextFont;
+    font-family: $medium-text-font;
     font-size: 12px;
     text-align: center;
-    margin-top: $logoPSpanMargin;
-    color: $TextColorFooter;
+    margin-top: $logo-p-span-margin;
+    color: $text-color-footer;
 }
 .footer-cr {
   margin-top: 43px;
   margin-right: 192px;
   font-size: 20px;
-  font-family: $MediumTextFont;
+  font-family: $medium-text-font;
   text-align: right;
-  color: $FooterTextColor;
+  color: $footer-text-color;
 }

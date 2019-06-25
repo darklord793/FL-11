@@ -48,7 +48,7 @@ p.header_heading {
   margin-top: 65px;
   width: 700px;
   font-size: 90px;
-  font-family: source sans pro;
+  font-family: "source sans pro";
   font-weight: 700;
   line-height: 100%;
   color: White; }
@@ -94,7 +94,7 @@ main {
 
 main.section p.section_text {
   text-align: center;
-  font-family: source sans pro;
+  font-family: "source sans pro";
   font-size: 50px;
   position: relative;
   font-weight: 600;
@@ -124,7 +124,7 @@ main.section p.section_text::after {
   margin-right: 192px; }
 
 .section_card {
-  border: 0px solid #3B3F50;
+  border: 0px;
   border-radius: 10px 10px 10px 10px;
   margin-left: 20px;
   background-color: #3B3F50;
@@ -145,7 +145,7 @@ main.section p.section_text::after {
   justify-content: center !important;
   width: max-content;
   text-align: center !important;
-  font-family: source sans pro;
+  font-family: "source sans pro";
   font-size: 30px;
   position: relative;
   font-weight: 600;
@@ -191,7 +191,7 @@ p.section_card_heading::after {
 
 .section_banner_heading {
   margin-left: 130px;
-  font-family: source sans pro;
+  font-family: "source sans pro";
   margin-top: 35px;
   font-size: 34px;
   text-align: left;
@@ -216,7 +216,7 @@ p.section_banner_text {
   display: flex;
   flex-direction: column;
   margin-left: 130px;
-  font-family: source sans pro;
+  font-family: "source sans pro";
   margin-top: -10px;
   margin-bottom: auto;
   font-size: 19px;
@@ -257,7 +257,7 @@ footer {
 .footer_text {
   margin-left: 70px;
   width: 350px;
-  font-size: 19;
+  font-size: 19px;
   font-family: Fresca;
   line-height: 150%;
   color: #d1d1d1; }
