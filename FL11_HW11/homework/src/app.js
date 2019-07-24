@@ -162,6 +162,7 @@
           document.getElementById(buttonChangeId[i]).addEventListener("click", function () {
             let textValueNew = document.getElementById(inputValuePChangeId[i]).value;
             textValueP.innerHTML = '<p class="text-con" id="'+inputValuePChangeId[i]+'">'+textValueNew+'</p>';
+            tittle.innerHTML = 'TODO CAT List';
             buttonValueP.innerHTML = '<i class="material-icons item-Botton-change">create</i>';
             itemBottonDoneIcons.innerHTML = '<i class="material-icons item-Botton-not-done button-display-norm">'+
             'check_box_outline_blank</i>';
@@ -188,7 +189,7 @@
 
         fill.addEventListener('dragstart', dragStart);
         fill.addEventListener('dragend', dragEnd);
-          
+
         for (const empty of empties) {
           empty.addEventListener('dragover', dragOver);
           empty.addEventListener('dragenter', dragEnter);
