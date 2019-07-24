@@ -187,43 +187,35 @@
         const fill = document.querySelector('.fill');
         const empties = document.querySelectorAll('.empty');
 
-        fill.addEventListener('dragstart', dragStart);
-        fill.addEventListener('dragend', dragEnd);
+        fill.addEventListener('dragstart', function dragStart() {
+          this.className += ' hold';
+          setTimeout( function (){
+            this.className = 'invisible'
+          }, 0);
+        });
+
+        fill.addEventListener('dragend', function dragEnd() {
+          this.className = 'fill';
+        });
 
         for (const empty of empties) {
-          empty.addEventListener('dragover', dragOver);
-          empty.addEventListener('dragenter', dragEnter);
-          empty.addEventListener('dragleave', dragLeave);
-          empty.addEventListener('drop', dragDrop);
-        }
+          empty.addEventListener('dragover', function dragOver(e) {
+            e.preventDefault();
+          });
 
-        function dragStart() {
-          this.className += ' hold';
-          setTimeout(() => (this.className = 'invisible'), 0);
-        }
+          empty.addEventListener('dragenter', function dragEnter(e) {
+            e.preventDefault();
+            this.className += ' hovered';
+          });
 
-        function dragEnd() {
-          this.className = 'fill';
+          empty.addEventListener('dragleave', function dragLeave() {
+            this.className = 'empty';
+          });
+          empty.addEventListener('drop', function dragDrop() {
+            this.className = 'empty';
+            this.append(fill);
+          });
         }
-
-        function dragOver(e) {
-          e.preventDefault();
-        }
-
-        function dragEnter(e) {
-          e.preventDefault();
-          this.className += ' hovered';
-        }
-
-        function dragLeave() {
-          this.className = 'empty';
-        }
-
-        function dragDrop() {
-          this.className = 'empty';
-          this.append(fill);
-        }
-
       } else {
         document.getElementById("button-click").setAttribute("disabled", "true");
         itemBottonContainer.innerHTML = '<i class="material-icons item-input-button-disabled">add_box</i>';
