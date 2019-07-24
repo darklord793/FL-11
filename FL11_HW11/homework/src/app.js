@@ -103,14 +103,16 @@
              "input-Value-P-Change-9",
              "input-Value-P-Change-10"];
 
-        let listConatiners = document.createElement('div');
-        root.insertBefore(listConatiners, root.appendChild[0]);
-        listConatiners.className ="dropzone";
+        let dropeConatiners = document.createElement('div');
+        root.insertBefore(dropeConatiners, root.appendChild[0]);
+        dropeConatiners .className ="empty";
 
-        let listConatiner = document.createElement('div');
-        listConatiners.insertBefore(listConatiner, listConatiners.appendChild[0]);
+        let listConatiners = document.createElement('div');
+        dropeConatiners.insertBefore(listConatiners, dropeConatiners.appendChild[0]);
+        listConatiners.innerHTML ='<div  id="'+listConatinerId[i]+'"draggable="true"></div>';
+        let listConatiner = document.getElementById(listConatinerId[i]);
+        listConatiners.className = "fill";
         listConatiner.className = "list-conatiner";
-        listConatiner.id = listConatinerId[i];
 
         let doneIconsContainer = document.createElement('div');
         listConatiner.insertBefore(doneIconsContainer, listConatiner.appendChild[0]);
@@ -128,7 +130,7 @@
             textValue = document.getElementById('imput-text').value;
             itemBottonDoneIcons.innerHTML = '<i class="material-icons item-Botton-done"">check_box</i>';
             document.getElementById(buttonChangeId[i]).setAttribute("disabled", "true");
-            textValueP.innerHTML = '<p class="text-cont bloced-paragraf " id="'+inputValuePChangeId[i]+'">'
+            textValueP.innerHTML = '<p class="text-cont bloced-paragraf" id="'+inputValuePChangeId[i]+'">'
             +textValue+'</p>';
             buttonValueP.innerHTML = '<i class="material-icons item-Botton-change bloced-paragraf">create</i>';
           });
@@ -178,6 +180,48 @@
           listConatiner.parentNode.removeChild(listConatiner)
         });
 
+        const fill = document.querySelector('.fill');
+        const empties = document.querySelectorAll('.empty');
+
+        // Fill listeners
+        fill.addEventListener('dragstart', dragStart);
+        fill.addEventListener('dragend', dragEnd);
+
+        // Loop through empty boxes and add listeners
+        for (const empty of empties) {
+          empty.addEventListener('dragover', dragOver);
+          empty.addEventListener('dragenter', dragEnter);
+          empty.addEventListener('dragleave', dragLeave);
+          empty.addEventListener('drop', dragDrop);
+        }
+
+        function dragStart() {
+          this.className += ' hold';
+          setTimeout(() => (this.className = 'invisible'), 0);
+        }
+
+        function dragEnd() {
+          this.className = 'fill';
+        }
+
+        function dragOver(e) {
+          e.preventDefault();
+        }
+
+        function dragEnter(e) {
+          e.preventDefault();
+          this.className += ' hovered';
+        }
+
+        function dragLeave() {
+          this.className = 'empty';
+        }
+
+        function dragDrop() {
+          this.className = 'empty';
+          this.append(fill);
+        }
+
       } else {
         document.getElementById("button-click").setAttribute("disabled", "true");
         itemBottonContainer.innerHTML = '<i class="material-icons item-input-button-disabled">add_box</i>';
@@ -187,4 +231,5 @@
     n+=1;
     j+=1;
   }
+
 }
