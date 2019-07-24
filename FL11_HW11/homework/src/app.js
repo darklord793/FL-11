@@ -1,5 +1,6 @@
   let root = document.getElementById("root");
   let tittle = document.createElement('h1');
+
   tittle.innerHTML = "TODO CAT List";
   root.insertBefore(tittle, root.appendChild[0]);
 
@@ -151,6 +152,8 @@
         document.getElementById(buttonChangeId[i]).addEventListener("click", function () {
           textValue = document.getElementById('imput-text').value;
           textValueP.innerHTML = '<input class="input-list-style" id="'+inputValuePChangeId[i]+'">';
+          tittle.innerHTML = 'TODO CAT List \n <p class=warning>The new value of this element'
+          +'will be transferred from the main input</p>';
           buttonValueP.innerHTML = '<i class="material-icons item-Botton-change">save</i>';
           itemBottonDoneIcons.innerHTML = '<i class="material-icons item-Botton-not-done button-display-none">'+
           'check_box_outline_blank</i>';
@@ -185,8 +188,7 @@
 
         fill.addEventListener('dragstart', dragStart);
         fill.addEventListener('dragend', dragEnd);
-
-        
+          
         for (const empty of empties) {
           empty.addEventListener('dragover', dragOver);
           empty.addEventListener('dragenter', dragEnter);
